@@ -11,10 +11,25 @@ export default class World {
     this.resources.on("groupEnd", (_group) => {
       if (_group.name === "base") {
         this.setRoom();
+        this.setWallframe();
       }
     });
 
     // this.addAxesHelper();
+  }
+
+  setWallframe() {
+    this.wallframe = {};
+    this.wallframe.model = this.resources.items.wallframeModel.scene;
+
+    this.wallframe.model.traverse((o) => {
+      if (o.isMesh) {
+        o.material.map = this.resources.items.exampleTexture;
+        o.material.map.flipY = false;
+      }
+    });
+
+    this.scene.add(this.wallframe.model);
   }
 
   setRoom() {
