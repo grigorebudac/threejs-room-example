@@ -1,18 +1,22 @@
-# Three.js - Template - Complex
+# Three.js Room Example
 
-🚧 This template is under construction
+<img src="https://i.imgur.com/9IXKmUx.png" width="100%" height="auto" alt="Preview of the room model" />
 
-## Setup
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+This is a playground repository where I'm learning how to load and interact with 3d models using Three.js.
 
-``` bash
-# Install dependencies (only the first time)
+
+## Installation
+
+To install all the needed dependencies, run:
+
+```
 npm install
+```
 
-# Run the local server at localhost:8080
+## Usage
+
+To start the project, run:
+
+```
 npm run dev
-
-# Build for production in the dist/ directory
-npm run build
 ```
